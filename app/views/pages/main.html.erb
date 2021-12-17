@@ -1,4 +1,38 @@
-<div>
-  <h1 class="text-lg font-bold text-4xl">Pages#main</h1>
-  <p>Find me in app/views/pages/main.html.erb</p>
+<div class="flex flex-col lg:flex-row w-full">
+  <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
+    <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Hello!</h2>
+    <article class="px-4 h-full bg-base-300 flex gap-1">
+      <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
+        <i class="far fa-address-card text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
+        My name is  <%= link_to "Chase Covington", root_path, class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>. <br>
+        I'm a web developer from South Carolina. <br class="hidden lg:block">
+        I love learning how things work and solving puzzles.</p>
+    </article>
+  </div>
+  <div class="divider divider-horizontal lg:divider-vertical"></div>
+  <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
+    <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">What do I do?</h2>
+    <article class="px-4 h-full bg-base-300 flex gap-1">
+      <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
+        <i class="fas fa-code text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
+        My passion is for <%= link_to "developing", root_path, class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>
+        web based applications through Ruby on Rails;<br>
+        Making use of MVC design patterns,
+        test-driven development process,
+        and implementing RESTful design</p>
+    </article>
+  </div>
+  <div class="divider divider-horizontal lg:divider-vertical"></div>
+  <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
+    <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Get to know me!</h2>
+    <article class="px-4 h-full bg-base-300 flex gap-1">
+      <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
+        <i class="far fa-handshake  text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
+        I love sharing my personal projects
+        on GitHub & documenting my
+        development process and what I learn
+        with others through use of <%= link_to "my blog", root_path, class:"font-medium hover:font-bold underline decoration-accent-focus hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>.</p>
+    </article>
+  </div>
+</div>
 </div>
