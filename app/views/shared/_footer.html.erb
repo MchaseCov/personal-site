@@ -3,7 +3,7 @@
     <span class="footer-title font-josefin">Pages</span>
     <%= link_to  "Home", root_path, class:"link link-hover" %>
     <%= link_to  "About", about_path, class:"link link-hover" %>
-    <%= link_to  "Portfolio*", root_path, class:"link link-hover" %>
+    <%= link_to  "Portfolio", projects_path, class:"link link-hover" %>
     <%= link_to  "Contact*", root_path, class:"link link-hover" %>
     <% if cookies[:dark_mode] %>
       <%= link_to "Disable Dark Mode", light_mode_path, class:"link link-hover", :data => {turbo: "false"} %>
