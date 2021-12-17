@@ -1,0 +1,35 @@
+<footer class="p-10 footer bg-base-300 text-base-content mt-auto font-open-sans">
+  <div>
+    <span class="footer-title font-josefin">Pages</span>
+    <%= link_to  "Home", root_path, class:"link link-hover" %>
+    <%= link_to  "About*", root_path, class:"link link-hover" %>
+    <%= link_to  "Portfolio*", root_path, class:"link link-hover" %>
+    <%= link_to  "Contact*", root_path, class:"link link-hover" %>
+    <% if cookies[:dark_mode] %>
+      <%= link_to "Disable Dark Mode", light_mode_path, class:"link link-hover", :data => {turbo: "false"} %>
+    <% else %>
+      <%= link_to "Enable Dark Mode", dark_mode_path, class:"link link-hover", :data => {turbo: "false"} %>
+    <% end %>
+  </div>
+  <div>
+    <span class="footer-title font-josefin">Made With</span>
+    <%= link_to  "Ruby On Rails 7.0", 'https://rubyonrails.org/', class:"link link-hover", target:'_blank' %>
+    <%= link_to  "Tailwind CSS 3.0", 'https://tailwindcss.com/', class:"link link-hover", target:'_blank' %>
+    <%= link_to  "DaisyUI for Tailwind 1.16", 'https://daisyui.com/', class:"link link-hover", target:'_blank' %>
+    <%= link_to  "Hotwire 7.1", 'https://hotwired.dev/', class:"link link-hover", target:'_blank' %>
+  </div>
+  <div>
+    <span class="footer-title font-josefin">Social</span>
+    <div class="grid grid-flow-col gap-4 align-middle leading-3">
+      <%= mail_to 'mchasecov@gmail.com', target:'_blank', class:'align-middle bg-neutral rounded-full' do %>
+        <i class="fas fa-envelope text-accent p-2 text-2xl" ></i>
+      <% end %>
+      <%= link_to 'https://github.com/MchaseCov', target:'_blank' do %>
+        <i class='fab fa-github text-2xl'></i>
+      <% end %>
+      <%= link_to 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank' do %>
+        <i class='fab fa-linkedin-in text-2xl'></i>
+      <% end %>
+    </div>
+  </div>
+</footer>
