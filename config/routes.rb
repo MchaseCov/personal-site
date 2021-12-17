@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'projects/index'
+  resources :projects, only: %i[index show]
   root 'pages#main'
   get '/main', to: 'pages#main'
   get '/about', to: 'pages#about'
