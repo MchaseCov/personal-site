@@ -1,5 +1,5 @@
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full" do%>
-  <article id="testbox" class="flex flex-col lg:flex-row w-full animate__animated animate__fadeInRight">
+  <article id="animation-region" class="flex flex-col lg:flex-row w-full animate__animated animate__fadeInRight">
     <%= render partial:'card', collection: @cards, spacer_template: "divider" %>
   </article>
 <% end %>

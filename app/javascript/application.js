@@ -4,7 +4,7 @@ import "controllers"
 
 document.addEventListener('turbo:before-fetch-request', async function (event) {
   event.preventDefault() // Stops the fetch of the next page
-  let region = document.getElementById("testbox") // At this point, this is still referencing the 'old' page's element.
+  let region = document.getElementById("animation-region") // At this point, this is still referencing the 'old' page's element.
   region.className += " animate__fadeOutLeft" // Add the fade out CSS class to the element (which automatically fires itself)
   region.addEventListener('animationend', function () { // Signals when the fade out animation is over.
     event.detail.resume() // Resumes loading from our earlier preventDefault!
