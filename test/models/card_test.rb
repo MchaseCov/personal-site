@@ -5,10 +5,10 @@ class CardTest < ActiveSupport::TestCase
   # test_validates_presence_of
   # test_validates_uniqueness_of
   #
-  test_validates_presence_of :title, :body, :call_to_action, :icon_class, :page_name
+  test_validates_presence_of :title, :body, :call_to_action, :icon_class, :page_name, :cta_path
 
-  test 'invalid if icon_class does not begin with fas or fab and space' do
-    icon_class = 'faz foo'
+  test 'invalid if icon_class does not begin with fas, far or fab and space' do
+    icon_class = 'fao foo'
     card = Card.new(icon_class: icon_class)
     card.valid?
     assert_not card.errors[:icon_class].empty?
@@ -28,5 +28,18 @@ class CardTest < ActiveSupport::TestCase
 
   test 'Cards have many scrollers' do
     assert_equal 2, cards(:main_page_card).scrollers.size
+  end
+
+  test 'title must be unique' do
+    title = 'ABC123'
+    original_card = Card.new(title: title, body: 'test', call_to_action: 'test', cta_path: 'path',
+                             icon_class: 'fas foo', page_name: 'main')
+    duplicate_card = Card.new(title: title, body: 'test', call_to_action: 'test', cta_path: 'path',
+                              icon_class: 'fas foo', page_name: 'main')
+
+    assert original_card.save
+    assert Card.pluck(:title).include?(title)
+    assert_not duplicate_card.save
+    duplicate_card.errors.messages[:title].include?('has already been taken')
   end
 end

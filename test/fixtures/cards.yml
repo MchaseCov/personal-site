@@ -6,6 +6,7 @@ main_page_card:
   call_to_action: MyString
   icon_class: MyString
   page_name: 'main'
+  cta_path: projects
   
 invalid_page_card:
   title: MyString

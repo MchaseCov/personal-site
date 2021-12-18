@@ -13,6 +13,7 @@ class Scroller < ApplicationRecord
   # Scopes
   # Validations
   validates_presence_of :body
+  validates :body, uniqueness: true
   # Associations
   belongs_to :card
   # Methods
