@@ -1,0 +1,22 @@
+<div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg overflow-hidden">
+  <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold"><%=card.title%></h2>
+  <section class="px-4 h-full bg-base-200 ">
+    <div class="flex">
+      <i class="far fa-address-card text-3xl text-primary mr-3 pt-1 lg:pt-3"></i>
+      <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-4"><%=card.body%></p>
+    </div>
+    <%= button_to card.call_to_action, eval("#{card.cta_path}_path"), class:"bg-primary text-primary-content rounded p-3 mb-24 lg:mb-0", method: :get %>
+    <div class="absolute bottom-3 left-0 right-0 space-y-1 select-none">
+      <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+        <%card.scrollers[0..9].each do |scroller|%>
+          <span class="bg-base-300 py-1 px-3 rounded"><%=scroller.body%></span>
+        <% end %>
+      </div>
+      <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+        <%card.scrollers[10..19].each do |scroller|%>
+          <span class="bg-base-300 py-1 px-3 rounded"><%=scroller.body%></span>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
