@@ -29,3 +29,16 @@
 .scroller:first-child {
   animation-duration: 30s;
 }
+
+@keyframes transform-down {
+  from {
+    margin-bottom: 0;
+  }
+
+  to {
+    margin-bottom: 62rem;
+  }
+}
+.expand-turbo-parent {
+  animation: 0.7s transform-down;
+}
