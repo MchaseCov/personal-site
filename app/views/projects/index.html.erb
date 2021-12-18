@@ -1,5 +1,5 @@
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full" do%>
-  <article class="flex flex-col w-full animate__animated animate__fadeInRight" data-turn-exit="animate__animated animate__fadeOutLeft">
+  <article id="testbox" class="flex flex-col w-full animate__animated animate__fadeInRight">
     <div class="overflow-x-scroll whitespace-nowrap snap-mandatory snap-x w-full h-[28rem] scroll-px-2 scroll-smooth">
       <%i=0%>
       <div class="w-full h-full bg-primary inline-block snap-start text-9xl text-center" id="page-<%=i+=1%>">test<%=i%></div>
