@@ -2,8 +2,8 @@
 
 one:
   body: MyText
-  card: one
+  card: main_page_card
 
 two:
   body: MyText
-  card: two
+  card: main_page_card

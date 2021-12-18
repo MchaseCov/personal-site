@@ -16,9 +16,10 @@ class Card < ApplicationRecord
   # Scopes
   scope :main_cards, -> { where(page_name: 'main') }
   # Validations
-  validates :title, :body, :call_to_action, :icon_class, :page_name, presence: true
+  validates_presence_of :title, :body, :call_to_action, :icon_class, :page_name
   validates_format_of :icon_class, with: /(fas |fab )/
   validates :page_name, inclusion: { in: %w[main about portfolio], message: '%<value>s is not a valid page!' }
   # Associations
+  has_many :scrollers
   # Methods
 end

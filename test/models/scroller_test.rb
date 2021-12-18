@@ -1,7 +1,13 @@
-require "test_helper"
+require 'test_helper'
 
 class ScrollerTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  include TestModelValidations
+  # test_validates_presence_of
+  # test_validates_uniqueness_of
+  #
+  test_validates_presence_of :body
+
+  test 'Scrollers belong to a card' do
+    assert scrollers(:one).card
+  end
 end

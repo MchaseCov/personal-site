@@ -25,4 +25,8 @@ class CardTest < ActiveSupport::TestCase
     assert_includes Card.main_cards, cards(:main_page_card)
     refute_includes Card.main_cards, cards(:invalid_page_card)
   end
+
+  test 'Cards have many scrollers' do
+    assert_equal 2, cards(:main_page_card).scrollers.size
+  end
 end

@@ -12,6 +12,7 @@ class Scroller < ApplicationRecord
   # Callbacks
   # Scopes
   # Validations
+  validates_presence_of :body
   # Associations
   belongs_to :card
   # Methods
