@@ -1,39 +1,120 @@
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full" do%>
   <article id="testbox" class="flex flex-col lg:flex-row w-full animate__animated animate__fadeInRight">
-    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
-      <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Hello!</h2>
-      <article class="px-4 h-full bg-base-300 flex gap-1">
-        <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
-          <i class="far fa-address-card text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
-          My name is  <%= link_to "Chase Covington", root_path, class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>. <br>
-          I'm a web developer from South Carolina. <br class="hidden lg:block">
-          I love learning how things work and solving puzzles.</p>
-      </article>
+    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg overflow-hidden">
+      <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Hello & Welcome!</h2>
+      <section class="px-4 h-full bg-base-200 ">
+        <div class="flex">
+          <i class="far fa-address-card text-3xl text-primary mr-3 pt-1 lg:pt-3"></i>
+          <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-4">
+            My name is Chase Covington.<br>
+            I'm a web developer from SC.</p>
+        </div>
+        <%= button_to "Learn More About Me?", about_path, class:"bg-primary text-primary-content rounded p-3 mb-24 lg:mb-0", method: :get %>
+        <div class="absolute bottom-3 left-0 right-0 space-y-1">
+          <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+            <span class="bg-base-300 py-1 px-3 rounded">Passionate</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Architecture</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Love the beach</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Ambition</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Cat lover</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Art and Design</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Curiosity Driven</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Experimentation</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Love for learning</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Innovative</span>
+          </div>
+          <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+            <span class="bg-base-300 py-1 px-3 rounded">Determination</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Cooking</span>
+            <span class="bg-base-300 py-1 px-3 rounded">South Carolina</span>
+            <span class="bg-base-300 py-1 px-3 rounded">PC Hardware</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Momentum Workflow</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Nature</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Animal Crossing</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Figuring out "Why?"</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Photography</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Excited</span>
+          </div>
+        </div>
+      </section>
     </div>
     <div class="divider divider-horizontal lg:divider-vertical"></div>
-    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
+    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg overflow-hidden">
       <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">What do I do?</h2>
-      <article class="px-4 h-full bg-base-300 flex gap-1">
-        <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
-          <i class="fas fa-code text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
-          My passion is for <%= link_to "developing", root_path, class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>
-          web based applications through Ruby on Rails;<br>
-          Making use of MVC design patterns,
-          test-driven development process,
-          and implementing RESTful design</p>
-      </article>
+      <section class="px-4 h-full bg-base-200 w-full">
+        <div class="flex m-0">
+          <i class="fas fa-code text-3xl text-primary mr-3 pt-1 lg:pt-3 mb-2"></i>
+          <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-4">
+            I love web development & using
+            test-driven RESTful design patterns.</p>
+        </div>
+        <%= button_to "See some of my work?", projects_path, class:"bg-primary text-primary-content rounded p-3 m-0 mb-24 lg:mb-0 z-50", method: :get %>
+        <div class="absolute bottom-3 left-0 right-0 space-y-1">
+          <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+            <span class="bg-base-300 py-1 px-3 rounded">HTML</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Turbo Links</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Responsive Design</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Postgres</span>
+            <span class="bg-base-300 py-1 px-3 rounded">MVC Frameworks</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Javascript</span>
+            <span class="bg-base-300 py-1 px-3 rounded">RSpec</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Rails</span>
+            <span class="bg-base-300 py-1 px-3 rounded">SQL</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Test-Driven-Design</span>
+          </div>
+          <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+            <span class="bg-base-300 py-1 px-3 rounded">CSS</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Turbo Frames</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Tailwind</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Bash</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Git Push --Force</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Devise</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Stimulus</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Ruby</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Data Validation</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Omniauth</span>
+          </div>
+        </div>
+      </section>
     </div>
     <div class="divider divider-horizontal lg:divider-vertical"></div>
-    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
+    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg overflow-hidden">
       <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Get to know me!</h2>
-      <article class="px-4 h-full bg-base-300 flex gap-1">
-        <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
-          <i class="far fa-handshake  text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
-          I love sharing my personal projects
-          on GitHub & documenting my
-          development process and what I learn
-          with others through use of <%= link_to "my blog", root_path, class:"font-medium hover:font-bold underline decoration-accent-focus hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>.</p>
-      </article>
+      <section class="px-4 h-full bg-base-200 w-full">
+        <div class="flex m-0">
+          <i class="far fa-handshake   text-3xl text-primary mr-3 pt-1 lg:pt-3"></i>
+          <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-4">
+            I enjoy sharing what I know,
+            and talking about my experiences!</p>
+        </div>
+        <%= button_to "Check my blog out?", projects_path, class:"bg-primary text-primary-content rounded p-3 m-0 mb-24 lg:mb-0 z-50", method: :get %>
+        <div class="absolute bottom-3 left-0 right-0 space-y-1">
+          <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+            <span class="bg-base-300 py-1 px-3 rounded">Self-Teaching</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Partnership</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Documentation</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Shared Experience</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Reflection</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Open-Source</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Collaberation</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Participation</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Self-Expression</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Community</span>
+          </div>
+          <div class="scroller flex space-x-1 whitespace-nowrap text-xs text-neutral">
+            <span class="bg-base-300 py-1 px-3 rounded">Expertise</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Learning from Feedback</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Audience</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Learning From Mistakes</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Creative Outlet</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Journey</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Knowledge</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Technical Content</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Sharing Passions</span>
+            <span class="bg-base-300 py-1 px-3 rounded">Guiding Others</span>
+          </div>
+        </div>
+      </section>
     </div>
   </article>
 <% end %>
