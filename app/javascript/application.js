@@ -9,7 +9,7 @@ document.addEventListener('turbo:before-fetch-request', async (event) => {
   if (event.target.id == "project-information") {
     let region = document.getElementById("project-information")
     if (region.classList.contains("completed")) { event.detail.resume(); return }
-    else { // Else if its not containing completed aka (!region.classList.contains("completed"))
+    else {
       region.classList.add("expand-turbo-parent");
       region.addEventListener('animationend', () => {
         if (!region.classList.contains("completed")) {
