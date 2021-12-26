@@ -1,0 +1,12 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 'Personal Site'
+  screenshot_url: 'https://i.imgur.com/clykCpV.jpg'
+  thumb_icon: 'fas fa-user-tie'
+  full_desc: 'This website is where you are at right now! This website features a simple, yet still dynamic, showcase of my development projects and who I am as a person. I make use of Hotwire, notably Turbo Frames, to create the sense of a Single Page Application while still keeping the various pages contained to their own views and controllers so that the information is only loaded upon the appropriate HTTP requests. Javascript event listeners also help reinforce a fluid feel of the website as it listens to begin and end page transitions, and use of Tailwind helps me efficiently keep the website responsive for both mobile and desktop users. If you have any feedback on how I could improve the website or do run into any trouble with features on it, please contact me to let me know! I would love to hear what you think and fix any bugs that cause you trouble!'
+  small_desc: 'A showcase of my projects and who I am!'
+  repo_url: 'https://github.com/MchaseCov/personal-site'
+  live_url: 'https://github.com/MchaseCov/personal-site'
+  feature_list: ['Simple UI to navigate various sections', 'View my favorite projects!',
+  'Hotwire for responsive page navigation']
