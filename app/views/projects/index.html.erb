@@ -1,18 +1,25 @@
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full" do%>
   <article id="animation-region" class="flex flex-col w-full animate__animated animate__fadeInRight">
-    <h1 id="hold" class="text-neutral font-bold text-4xl font-josefin text-center pb-1">wow look its all my projects in a grid and u could like click them</h1>
+    <h1 id="hold" class="text-neutral font-bold text-4xl font-josefin text-center pb-1">List of my projects:</h1>
     <%= turbo_frame_tag id="project-information", target: '_top', class:"w-full" do%>
     <% end %>
-    <div class="grid grid-cols-3 gap-3 mt-2" id="project-grid">
-      <div class="w-32 h-32 bg-secondary"> <%= link_to  "01", project_path(id:1), 'data-turbo-frame': "project-information"%> </div>
-      <div class="w-32 h-32 bg-secondary"> <%= link_to  "02", project_path(id:2), 'data-turbo-frame': "project-information" %> </div>
-      <div class="w-32 h-32 bg-secondary">03</div>
-      <div class="w-32 h-32 bg-secondary">04</div>
-      <div class="w-32 h-32 bg-secondary">05</div>
-      <div class="w-32 h-32 bg-secondary">06</div>
-      <div class="w-32 h-32 bg-secondary">07</div>
-      <div class="w-32 h-32 bg-secondary">09</div>
-      <div class="w-32 h-32 bg-secondary">08</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-1 lg:grid-cols-3 mt-2 mx-auto" id="project-grid">
+      <%@projects.each do |project|%>
+        <%= link_to project_path(project), class:"overflow-hidden w-64 h-64 bg-secondary project_card rounded-xl lg:m-8", 'data-turbo-frame': "project-information" do%>
+          <div class="internal-card vw-64 h-128 flex flex-col">
+            <div class="w-64 h-64 bg-accent flex">
+              <p class="m-auto font-semibold text-neutral text-2xl text-center">
+                <%=project.small_desc%>
+              </p>
+            </div>
+            <div class="w-64 h-64 flex flex-col">
+              <i class="<%=project.thumb_icon%> text-[10rem] text-neutral m-auto"></i>
+              <h3 class="text-center text-3xl text-neutral font-bold pb-3"><%=project.title%></h3>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </article>
 <% end %>
+<i class="fas fa-user-friend"></i>

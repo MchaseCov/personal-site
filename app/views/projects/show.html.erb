@@ -5,14 +5,14 @@
         <section class="text-neutral">
           <div class="container py-6 lg:py-12 mx-auto flex flex-col">
             <div class="w-5/6 lg:w-4/6 mx-auto">
-              <h1 class="font-bold text-3xl font-josefin text-center pb-1">Website Project Thingy Thing! ! !</h1>
+              <h1 class="font-bold text-3xl font-josefin text-center pb-1"><%=@project.title%></h1>
               <div class="rounded-2xl h-72 overflow-hidden">
-                <%=image_tag "https://i.imgur.com/k4hyIRH.png", class:"object-cover object-top h-full w-full", alt:"Project Screenshot"  %>
+                <%=image_tag @project.screenshot_url, class:"object-cover object-top h-full w-full", alt:"Project Screenshot"  %>
               </div>
               <div class="flex flex-col lg:flex-row mt-10">
                 <div class="lg:w-1/3 text-center lg:pr-8 lg:py-8">
                   <div data-tip="View Code On Github!" class="tooltip tooltip-top">
-                    <%= link_to root_path do %>
+                    <%= link_to @project.repo_url, target:"blank" do %>
                       <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-base-100 shadow-lg hover:shadow-xl">
                         <i class='fab fa-github text-7xl'></i>
                       </div>
@@ -23,30 +23,20 @@
                     <div class="w-12 h-1 bg-accent rounded mt-2 mb-4"></div>
                     <div class="flex flex-wrap lg:w-4/5 mx-2 w-full gap-y-1">
                       <!-- Repeating list of boxes -->
-                      <div class="bg-base-100 rounded flex p-4 h-full w-full items-center">
-                        <i class="fas fa-angle-right px-1 text-secondary"></i>
-                        <h4 class="font-josefin font-medium">Database or like whatever</h4>
-                      </div>
-                      <div class="bg-base-100 rounded flex p-4 h-full w-full items-center">
-                        <i class="fas fa-angle-right px-1 text-secondary"></i>
-                        <h4 class="font-josefin font-medium">Hack The Mainframe To Achieve Web 3.0 Pixels</h4>
-                      </div>
-                      <div class="bg-base-100 rounded flex p-4 h-full w-full items-center">
-                        <i class="fas fa-angle-right px-1 text-secondary"></i>
-                        <h4 class="font-josefin font-medium">Octogonal Algorithmic Machine Learning Feature</h4>
-                      </div>
-                      <div class="bg-base-100 rounded flex p-4 h-full w-full items-center">
-                        <i class="fas fa-angle-right px-1 text-secondary"></i>
-                        <h4 class="font-josefin font-medium">Deer.png</h4>
-                      </div>
+                      <% @project.feature_list.each do |feature|%>
+                        <div class="bg-base-100 rounded flex p-4 h-full w-full items-center">
+                          <i class="fas fa-angle-right px-1 text-secondary"></i>
+                          <h4 class="font-josefin font-medium"><%=feature.humanize%></h4>
+                        </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>
                 <div class="lg:w-2/3 lg:pl-8 lg:py-8 lg:border-l border-secondary lg:border-t-0 border-t mt-4 pt-4 lg:mt-0 text-center lg:text-left">
                   <p class="leading-relaxed text-lg mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur, faucibus elementum ante eros in est. In posuere, ante id interdum pellentesque, enim neque posuere lectus, id aliquam risus diam ac nisl. Vivamus quis est pellentesque, congue justo vitae, malesuada risus. Nunc sed auctor sapien, ac fermentum sem. Aenean hendrerit urna quis imperdiet tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur elementum ante quis nibh lacinia elementum. Cras vitae malesuada nisi, et placerat nisl. Aenean ac tellus non sapien fermentum malesuada nec eu tellus. Nullam ac pretium eros. Quisque tortor velit, hendrerit id rhoncus ac, aliquam ac lorem. In hac habitasse platea dictumst. Sed laoreet erat aliquet consectetur euismod. In dui est, pulvinar non aliquet ut, ultricies quis arcu. Integer condimentum quam tellus, quis euismod enim malesuada nec.
+                    <%=@project.full_desc%>
                     <br>
-                    <%= link_to root_path, class:"inline-flex items-center text-primary font-josefin flex items-center mt-5 hover:underline hover:decoration-dotted hover:decoration-2" do%>
+                    <%= link_to @project.live_url, target:"blank", class:"inline-flex items-center text-primary font-josefin flex items-center mt-5 hover:underline hover:decoration-dotted hover:decoration-2" do%>
                       <i class="fas fa-external-link-alt pr-1"></i>
                       View live website!
                     <% end %>

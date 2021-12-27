@@ -42,3 +42,23 @@
 .expand-turbo-parent {
   animation: 0.7s transform-down;
 }
+@keyframes project-card-transform {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.internal-card {
+  transform: translateY(-50%);
+  animation-fill-mode: forwards;
+}
+.project_card {
+  animation-fill-mode: forwards;
+}
+.project_card:hover .internal-card {
+  animation-name: project-card-transform;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
