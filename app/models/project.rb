@@ -11,10 +11,13 @@
 # repo_url        :string
 # live_url        :string
 # feature_list    :text         array: true, default: []
+# hidden          :boolean
 # created_at      :datetime     null: false
 # updated_at      :datetime     null: false
 #
 class Project < ApplicationRecord
+  # Scopes
+  scope :visible, -> { where.not('hidden = true') }
   # Validations
   validates_presence_of :title, :screenshot_url, :thumb_icon, :full_desc, :small_desc, :repo_url, :feature_list
   validates :title, uniqueness: true

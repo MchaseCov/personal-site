@@ -6,6 +6,9 @@
           <div class="container py-6 lg:py-12 mx-auto flex flex-col">
             <div class="w-5/6 lg:w-4/6 mx-auto">
               <h1 class="font-bold text-3xl font-josefin text-center pb-1"><%=@project.title%></h1>
+              <% if @project.hidden? %>
+                <h2 class="text-center">This project has been hidden from the main feed to not draw attention away from new projects that are more representative of my current skillset</h2>
+              <% end %>
               <div class="rounded-2xl h-72 overflow-hidden">
                 <%=image_tag @project.screenshot_url, class:"object-cover object-top h-full w-full", alt:"Project Screenshot"  %>
               </div>
