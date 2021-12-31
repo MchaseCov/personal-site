@@ -32,6 +32,12 @@
                           <h4 class="font-josefin font-medium"><%=feature.humanize%></h4>
                         </div>
                       <% end %>
+                      <% if @count.present? %>
+                        <div class="bg-base-100 rounded flex p-4 h-full w-full items-center">
+                          <i class="fas fa-angle-right px-1 text-secondary"></i>
+                          <h4 class="font-josefin font-medium">Currently at <%=@count%> downloads </h4>
+                        </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>
