@@ -132,7 +132,7 @@ Project.create(
     {
       title: 'Social Media Clone',
       screenshot_url: 'https://i.imgur.com/Q9sT3XG.jpg',
-      thumb_icon: 'fas fa-user-friend',
+      thumb_icon: 'fas fa-user-friends',
       full_desc: 'In this project, I built a site that is functionally similar to Facebook. Users can sign up using either on-site registration or Omniauth with Facebook or Github. Users are able to customize their names, avatar, and profile banner. Users can interact with others by adding other users as friends, creating and joining groups, creating journal posts on their timeline or on other user’s profiles, or by sending messages that instantly update back-and-forth between the users. Users also receive notifications to make sure they don’t miss any interactions from their friends!
 
       This project is one of my favorites. A wide range of associated models in the database are able to communicate and come together into a unified whole where all the pieces are able to work together.',
@@ -167,6 +167,36 @@ Project.create(
       live_url: 'https://github.com/MchaseCov/personal-site',
       feature_list: ['Simple UI to navigate various sections', 'View my favorite projects!',
                      'Hotwire for responsive page navigation']
+    },
+    {
+      title: 'New Tab Dashboard',
+      screenshot_url: 'https://i.imgur.com/xL5UIqE.jpeg',
+      thumb_icon: 'fas fa-laptop-code',
+      full_desc: "This is my personal dashboard that I use while working on projects. While it may not be the most visually advanced, this project is one that solved a real problem I was facing and I now use quite often. I wanted a way to keep myself more organized while I work and be able to stay on track if I have to take a break or split off onto a side project.
+
+      The dashboard has a functional SSH terminal that makes use of the Secure Shell Chrome/Edge extension (so that it's still a local SSH, no shellinabox here!). I can keep working notes right next to my terminal, the most recently edited ones loading by default. Below my terminal is where I have access to a range of documentation and my recent Github repos. Below that, I have a region where I can add sticky notes to myself, which I treat as a more long term or generic kind of note compared to my “quick notes” notepad next to the terminal.
+
+      You can access the website live on Heroku, but with the terminal and Github API functionality unavailable. You can still check out the SPA-style notepad and sticky notes or check out some documentations!",
+      repo_url: 'https://github.com/MchaseCov/dashboard',
+      small_desc: 'My personal dashboard for organized working!',
+      live_url: 'https://dashboard-mcc.herokuapp.com/',
+      hidden: false,
+      feature_list: ['A fully functioning (when local) terminal', 'SPA updates for notepads and sticky notes',
+                     'Organized workflow with notes, documentations, and quick links']
+    },
+    {
+      title: 'Hotwire Scaffold Generator Gem',
+      screenshot_url: 'https://i.imgur.com/29YfAv2.jpeg',
+      thumb_icon: 'far fa-gem',
+      small_desc: 'A Ruby gem library published for Rails & Hotwire applications',
+      full_desc: "This project is unlike the others featured on this page. This is not a web application, but rather is a Ruby Gem library I developed for use in conjunction with the Hotwire for Rails framework. This Gem adds a custom scaffold generator to your Rails application to get up and running with a fully functional SPA suite in moments. This includes a Stimulus Javascript controller, the full Rails MVC suite for an object, and even testing files and fixtures! Your controller and views are generated with Turbo Stream formats to respond with real time page updates upon HTTP requests. It also wraps data entries inside of Turbo Frame tags to allow for responsive editing, updating, and deletion of created entries.
+
+      I have used this in projects such as my New Tab Dashboard to get set up with the single page actions I need instantly, and published it online to be used or branched by anybody! You can check out a short demo video on how it works over on the Github repo. The live website button below will take you to the Rubygems page.",
+      hidden: false,
+      repo_url: 'https://github.com/MchaseCov/hotwire_scaffold_generator',
+      live_url: 'https://rubygems.org/gems/hotwire_scaffold_generator',
+      feature_list: ['A functional Ruby gem for Rails', 'Custom scaffolding to create a SPA app in moments',
+                     'Published on rubygems.org']
     }
   ]
 )
