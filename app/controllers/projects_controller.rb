@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   require 'net/http'
 
   def index
-    @projects = Project.all.visible.order(created_at: :desc)
+    @projects = Project.all.visible.order(updated_at: :desc)
   end
 
   def show
