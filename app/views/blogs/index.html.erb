@@ -3,7 +3,7 @@
     <h1 id="hold"class="text-neutral font-bold text-4xl font-josefin text-center pb-1">List of my blogs:</h1>
     <%= turbo_frame_tag id="project-information", target: '_top', class:"w-full" do%>
     <% end %>
-    <div id="project-grid" class="grid gap-1 grid-cols-3 mt-2 mx-auto">
+    <div id="project-grid" class="grid grid-cols-1 gap-x-1 gap-y-3 lg:grid-cols-2 xl:grid-cols-3 mt-2 mx-auto">
       <%= render @blogs %>
     </div>
   </article>
