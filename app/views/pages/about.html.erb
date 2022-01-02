@@ -1,21 +1,35 @@
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full", data: {turbo_action: "advance"} do%>
   <article id="animation-region" class="flex flex-col lg:flex-row w-full animate__animated animate__fadeInRight">
     <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg">
-      <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Hello!</h2>
+      <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Quick Info:</h2>
       <article class="px-4 h-full bg-base-300 flex gap-1">
-        <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
-          <i class="far fa-address-card text-3xl text-primary mr-3 float-left pt-1 lg:pt-3"></i>
-          My name is  <%= link_to "Chase Covington", root_path, class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold" %>. <br>
-          I'm a web developer from South Carolina. <br class="hidden lg:block">
-          I love learning how things work and solving puzzles.</p>
+        <ul class="text-xs lg:text-base xl:text-xl pb-8">
+          <li>My name is <strong class="font-semibold">Chase Covington</strong>.</li>
+          <li>My <strong class="font-semibold">email</strong> is <%= mail_to 'mchasecov@gmail.com', target:'_blank', class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold"%></li>
+          <li>My <strong class="font-semibold">resume</strong> can be found <%= link_to 'here', root_url+'Chase_Covington.pdf', target:'_blank', class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold"%></li>
+          <li>I am also on <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank', class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus active:font-extrabold"%></li>
+          <li>My favorite language is <strong class="font-semibold">Ruby</strong></li>
+          <li>And my favorite gem for Ruby is <strong class="font-semibold">turbo-rails.</strong></li>
+        </ul>
       </article>
     </div>
     <div class="divider divider-horizontal lg:divider-vertical"></div>
-    <div class="relative mockup-window bg-primary h-64 rounded-box basis-4/12 drop-shadow-lg flex-grow">
-      <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">What do I do?</h2>
+    <div class="relative mockup-window bg-primary h-max rounded-box basis-4/12 drop-shadow-lg flex-grow">
+      <h2 class="absolute top-3 left-24 font-josefin text-2xl text-primary-content font-bold">Ok cool, but who <em>am</em> I exactly?</h2>
       <article class="px-4 h-full bg-base-300 flex gap-1">
-        <p class="font-open-sans text-xs lg:text-base xl:text-xl pb-8">
-          A WHOLEE NEW PAAAGE</p>
+        <div class="flex flex-col gap-y-2.5 text-xs lg:text-base xl:text-xl pb-8">
+          <p class="indent-10">My name is <strong class="font-normal underline decoration-primary">Chase Covington</strong>. I'm a web developer from South Carolina who loves the learning opportunities and problem-solving that software development provides!</p>
+          <p class="indent-10">I am a <strong class="font-normal underline decoration-primary">full stack developer</strong> whose range includes <strong class="font-normal underline decoration-primary">Ruby on Rails</strong>, Javascript, HTML, CSS, and various libraries related to those languages. Of those, Ruby on Rails is definitely my favorite, but half of the fun with Rails is seeing everything come together when your front end is connected and working together!</p>
+          <p class="indent-10">I've always been <strong class="font-normal underline decoration-primary">excited in figuring out how things work</strong> and using those tools myself. My first taste of coding was creating Minecraft mod .jar files when I was about 13 years old. While I have always had fun with it, I never considered it as a career, nor did I even think about it much.</p>
+          <p class="indent-10">I attended <strong class="font-normal underline decoration-primary">Clemson University</strong> from 2017 to 2019 in the Landscape Architecture program. During that time I was able to connect with a wide range of people, serve as a mentor by being a Resident Assistant, and thought more about myself and what I wanted to do. Although my Landscape Architecture projects and designs were strong, I realized that it wasn't what I wanted to do anymore.</p>
+          <p class="indent-10">As schools shifted to being remote during the <strong class="font-normal underline decoration-primary">COVID-19 pandemic</strong>, I decided to also pursue web development online. I've learned through online resources,
+            <%= link_to "The Odin Project", 'https://www.theodinproject.com/', target:"_blank", class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus"%>
+            being the anchor that helped me stay structured, organized, and teach me the foundations I needed in order to <strong class="font-normal underline decoration-primary">begin my career.</strong></p>
+          <p class="indent-10">I still <strong class="font-normal underline decoration-primary">love learning</strong> and spending my time with new concepts and languages, but I am also <strong class="font-normal underline decoration-primary">seeking work</strong> in a position where I can apply what I do know so far.
+            If you like my <%= link_to "projects", projects_path, target:"_blank", class:"font-medium hover:font-bold underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus" %>
+            and would want to <strong class="font-normal underline decoration-primary">connect</strong> more, send me an <%= mail_to 'mchasecov@gmail.com', 'email', target:'_blank', class:"font-medium hover:font-bold  underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus"%>
+            or a message on <%= link_to "LinkedIn!", 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank', class:"font-medium hover:font-bold  underline decoration-accent hover:decoration-secondary hover:leading-none active:decoration-secondary-focus" %></p>
+        </div>
       </article>
     </div>
   </article>
