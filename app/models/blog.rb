@@ -6,8 +6,6 @@
 # title           :string
 # desc            :string
 # body            :text
-# associated_url  :string
-# url_text        :string
 # thumbnail       :string
 # created_at      :datetime     null: false
 # updated_at      :datetime     null: false
