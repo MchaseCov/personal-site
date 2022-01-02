@@ -4,21 +4,7 @@
     <%= turbo_frame_tag id="project-information", target: '_top', class:"w-full" do%>
     <% end %>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-1 lg:grid-cols-3 mt-2 mx-auto" id="project-grid">
-      <%@projects.each do |project|%>
-        <%= link_to project_path(project), class:"overflow-hidden w-64 h-64 bg-secondary project_card rounded-xl lg:m-8", 'data-turbo-frame': "project-information" do%>
-          <div class="internal-card vw-64 h-128 flex flex-col">
-            <div class="w-64 h-64 bg-accent flex">
-              <p class="m-auto font-semibold text-neutral text-2xl text-center">
-                <%=project.small_desc%>
-              </p>
-            </div>
-            <div class="w-64 h-64 flex flex-col">
-              <i class="<%=project.thumb_icon%> text-[10rem] text-neutral m-auto"></i>
-              <h3 class="text-center text-3xl text-neutral font-bold pb-3"><%=project.title%></h3>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
+      <%=render @projects %>
     </div>
   </article>
 <% end %>
