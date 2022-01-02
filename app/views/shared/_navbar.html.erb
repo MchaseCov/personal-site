@@ -4,12 +4,11 @@
   </div>
   <div class="mx-auto lg:px-2 lg:mx-2 navbar-center flex">
     <div class="flex items-stretch font-josefin">
+      <%= link_to 'Home', root_path, class:"btn btn-ghost btn-sm rounded-btn lg:hidden", 'data-turbo-frame': "content-slider"%>
       <%=link_to "About", about_path, class:"btn btn-ghost btn-sm rounded-btn", 'data-turbo-frame': "content-slider"%>
+      <%= link_to 'Resume', root_url+'Chase_Covington.pdf', target: '_blank', class:"btn btn-ghost btn-sm rounded-btn" %>
       <%=link_to "Portfolio", projects_path, class:"btn btn-ghost btn-sm rounded-btn", 'data-turbo-frame': "content-slider" %>
       <%=link_to "Blogs", blogs_path, class:"btn btn-ghost btn-sm rounded-btn", 'data-turbo-frame': "content-slider"%>
-      <a class="btn btn-ghost btn-sm rounded-btn">
-        Contact
-      </a>
     </div>
   </div>
   <div class="navbar-end  hidden lg:flex">
