@@ -1,7 +1,9 @@
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full", data: {turbo_action: "advance"} do%>
   <article id="animation-region" class="flex flex-col w-full animate__animated animate__fadeInRight">
-    <h1>Blogs</h1>
-    <div id="blogs">
+    <h1 id="hold"class="text-neutral font-bold text-4xl font-josefin text-center pb-1">List of my blogs:</h1>
+    <%= turbo_frame_tag id="project-information", target: '_top', class:"w-full" do%>
+    <% end %>
+    <div id="project-grid" class="grid gap-1 grid-cols-3 auto-rows-auto mt-2 mx-auto">
       <%= render @blogs %>
     </div>
   </article>

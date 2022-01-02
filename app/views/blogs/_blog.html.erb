@@ -1,8 +1,12 @@
-<div>
+<%= link_to blog, class:"overflow-hidden w-96 h-max bg-secondary rounded-xl lg:m-8", 'data-turbo-frame': "project-information" do %>
+  <div class="h-40 overflow-hidden">
+    <%=image_tag blog.thumbnail, class:"object-cover object-top h-full w-full", alt:"Blog Thumbnail image" %>
+  </div>
   <p>
     <strong><%= blog.title %></strong>
   </p>
-  <p>
-    <%= blog.desc %>
-  </p>
-</div>
+  <section class="h-72 flex flex-col justify-between">
+    <p><%= blog.desc %></p>
+    <p><%= blog.created_at.strftime("%B %e, %Y") %></p>
+  </section>
+<% end %>
