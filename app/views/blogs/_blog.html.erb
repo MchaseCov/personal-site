@@ -1,12 +1,14 @@
-<%= link_to blog, class:"overflow-hidden w-96 h-max bg-secondary rounded-xl lg:m-8", 'data-turbo-frame': "project-information" do %>
+<%= link_to blog, class:"overflow-hidden w-96 h-max bg-base-200 rounded-xl shadow-md hover:shadow-xl lg:m-8", 'data-turbo-frame': "project-information" do %>
   <div class="h-40 overflow-hidden">
     <%=image_tag blog.thumbnail, class:"object-cover object-top h-full w-full", alt:"Blog Thumbnail image" %>
   </div>
-  <p>
-    <strong><%= blog.title %></strong>
-  </p>
-  <section class="h-72 flex flex-col justify-between">
-    <p><%= blog.desc %></p>
-    <p><%= blog.created_at.strftime("%B %e, %Y") %></p>
-  </section>
+  <article class="w-full px-6 py-4">
+    <p>
+      <h3 class="text-secondary text-2xl underline text-center pb-3"><%= blog.title %></h3>
+    </p>
+    <div class="w-full h-72 flex flex-col justify-between mr-4">
+      <p><%= blog.desc %></p>
+      <p><%= blog.created_at.strftime("%B %e, %Y") %></p>
+    </div>
+  </article>
 <% end %>
