@@ -200,3 +200,19 @@ Project.create(
     }
   ]
 )
+Blog.create(
+  [
+    {
+      title: 'My Experience Creating a Multiplayer Chess App',
+      desc: 'I discuss how I created a Multiplayer Chess with instant updates. I get into the tools I used, the challenged I faced, and the evolution of my code as I pushed forward.',
+      body: File.read('db/blog_posts/blog_chess.md'),
+      thumbnail: 'https://i.imgur.com/j7hoeOx.jpg'
+    },
+    {
+      title: 'How a Turbo-Powered Facebook is Possible',
+      desc: 'I discuss a "Facebook Clone" project that I was working on and how Hotwire turned it from average into a fast-updating powerhouse!',
+      body: File.read('db/blog_posts/blog_smedia.md'),
+      thumbnail: 'https://i.imgur.com/JN4tSyx.jpg'
+    }
+  ]
+)
