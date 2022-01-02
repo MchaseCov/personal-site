@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs, only: %i[index show]
   resources :projects, only: %i[index show]
   root 'pages#main'
   get '/main', to: 'pages#main'
