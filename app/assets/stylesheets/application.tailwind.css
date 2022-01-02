@@ -98,6 +98,12 @@
 #blog-markdown ul li {
   margin: .33rem 0
 }
+#blog-markdown li ul {
+  margin-left: 3rem;
+}
+#blog-markdown li ul li {
+  font-size: .85rem;
+}
 #blog-markdown ol {
   list-style-type: decimal;
   list-style-position: outside;
