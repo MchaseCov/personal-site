@@ -1,11 +1,11 @@
 <footer id="site-foot" class="p-10 footer bg-base-300 text-base-content mt-auto font-open-sans" data-turbo="false">
   <div>
-    <span class="footer-title font-josefin">Turbo-Disabled Navigation</span>
+    <span class="footer-title font-josefin">Site Navigation</span>
     <%= link_to  "Home", root_path, class:"link link-hover" %>
     <%= link_to  "About", about_path, class:"link link-hover" %>
     <%= link_to  "Portfolio", projects_path, class:"link link-hover" %>
     <%= link_to  "Blogs", blogs_path, class:"link link-hover" %>
-    <%= link_to 'Resume', root_url+'Chase_Covington.pdf', target: '_blank', class:"link link-hover" %>
+    <%= link_to 'Resume (.pdf in new tab)', root_url+'Chase_Covington.pdf', target: '_blank', class:"link link-hover" %>
     <% if cookies[:dark_mode] %>
       <%= link_to "Disable Dark Mode", light_mode_path, class:"link link-hover", :data => {turbo: "false"} %>
     <% else %>
