@@ -23,13 +23,13 @@
   <div>
     <span class="font-bold uppercase mb-0.5 font-josefin">Social</span>
     <div class="grid grid-flow-col gap-4 align-middle leading-3">
-      <%= mail_to 'mchasecov@gmail.com', target:'_blank', class:'align-middle bg-neutral rounded-full', title: "Link to send me an email.", rel:"noreferrer" do %>
+      <%= mail_to 'mchasecov@gmail.com', target:'_blank', class:'align-middle bg-neutral rounded-full', 'aria-label': "Link to send me an email.", rel:"noreferrer" do %>
         <i class="fas fa-envelope text-accent p-2 text-2xl" ></i>
       <% end %>
-      <%= link_to 'https://github.com/MchaseCov', target:'_blank', title: "Link to my Github Profile.", rel:"noreferrer" do %>
+      <%= link_to 'https://github.com/MchaseCov', target:'_blank', 'aria-label': "Link to my Github Profile.", rel:"noreferrer" do %>
         <i class='fab fa-github text-2xl'></i>
       <% end %>
-      <%= link_to 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank', title: "Link to my LinkedIn Profile.", rel:"noreferrer" do %>
+      <%= link_to 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank', 'aria-label': "Link to my LinkedIn Profile.", rel:"noreferrer" do %>
         <i class='fab fa-linkedin-in text-2xl'></i>
       <% end %>
     </div>

@@ -13,24 +13,24 @@
   </div>
   <div class="navbar-end  hidden lg:flex">
     <% if cookies[:dark_mode] %>
-      <%= button_to light_mode_path, method: :get, class:"btn btn-square btn-ghost", :data => {turbo: "false"}, title: "Toggle light mode." do %>
+      <%= button_to light_mode_path, method: :get, class:"btn btn-square btn-ghost", :data => {turbo: "false"}, 'aria-label': "Toggle light mode." do %>
         <i class="fas fa-sun" style='font-size:1.5em'></i>
       <% end %>
     <% else %>
-      <%= button_to dark_mode_path, method: :get, class:"btn btn-square btn-ghost", :data => {turbo: "false"}, title: "Toggle dark mode." do %>
+      <%= button_to dark_mode_path, method: :get, class:"btn btn-square btn-ghost", :data => {turbo: "false"}, 'aria-label': "Toggle dark mode." do %>
         <i class="fas fa-moon" style='font-size:1.5em'></i>
       <% end %>
     <% end %>
     <div data-tip="My LinkedIn" class="tooltip tooltip-left tooltip-neutral">
       <button class="btn btn-square btn-ghost">
-        <%= link_to 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank', title: "Link to my LinkedIn Profile.", rel:"noreferrer" do %>
+        <%= link_to 'https://www.linkedin.com/in/chase-covington-784886228/', target:'_blank', 'aria-label': "Link to my LinkedIn Profile.", rel:"noreferrer" do %>
           <i class="fab fa-linkedin-in" style='font-size:1.5em'></i>
         <% end %>
       </button>
     </div>
     <div data-tip="My GitHub Profile" class="tooltip tooltip-left tooltip-neutral">
       <button class="btn btn-square btn-ghost">
-        <%= link_to 'https://github.com/MchaseCov', target:'_blank', title: "Link to my Github Profile.", rel:"noreferrer" do %>
+        <%= link_to 'https://github.com/MchaseCov', target:'_blank', 'aria-label': "Link to my Github Profile.", rel:"noreferrer" do %>
           <i class="fab fa-github" style='font-size:1.5em'></i>
         <% end %>
       </button>

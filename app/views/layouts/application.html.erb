@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<% if cookies[:dark_mode] %>
-  <html data-theme="personaldark" lang="en">
-  <% else %>
-    <html data-theme="personaltheme" class="scroll-smooth overflow-x-hidden">
-    <% end %>
-    <head>
-      <title>
-        <%= if content_for?(:title) then yield(:title) + ' | ' end %>
-          Chase Covington
-        </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name='description'content='<%= yield_meta_tag(:description, "Chase Covington's Website") %>' />
-        <%= csrf_meta_tags %>
-        <%= csp_meta_tag %>
-        <%= stylesheet_link_tag "inter-font", "data-turbo-track": "reload" %>
-        <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-        <%= javascript_importmap_tags %>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/03edaf5be8.js" crossorigin="anonymous"></script>
-      </head>
-      <body class="selection:bg-accent flex flex-col min-h-screen overflow-x-hidden relative">
-        <header class="z-50"><%= render  "shared/navbar" %></header>
-        <main class="container mx-auto mt-8 lg:mt-28 mb-6 px-5 flex">
-          <%= yield %>
-        </main>
-        <%= render "shared/footer" %>
-      </body>
-    </html>
+<% theme = cookies[:dark_mode] ? "personaldark" : "personaltheme" %>
+<html data-theme="<%=theme%>" class="scroll-smooth overflow-x-hidden" lang="en">
+  <head>
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+        Chase Covington
+      </title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name='description'content='<%= yield_meta_tag(:description, "Chase Covington's Website") %>' />
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag "inter-font", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/03edaf5be8.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="selection:bg-accent flex flex-col min-h-screen overflow-x-hidden relative">
+      <header class="z-50"><%= render  "shared/navbar" %></header>
+      <main class="container mx-auto mt-8 lg:mt-28 mb-6 px-5 flex">
+        <%= yield %>
+      </main>
+      <%= render "shared/footer" %>
+    </body>
+  </html>
