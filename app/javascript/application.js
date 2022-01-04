@@ -49,14 +49,12 @@ button.addEventListener("click", () => {
 function darkMode() {
   if (html.dataset.theme == "personaldark") {
     html.dataset.theme = "personaltheme";
-    button.classList.remove("fa-sun");
-    button.classList.add("fa-moon");
     document.cookie =
       "darkmode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   } else {
     html.dataset.theme = "personaldark";
-    button.classList.remove("fa-moon");
-    button.classList.add("fa-sun");
     document.cookie = "darkmode=dark mode on";
   }
+  button.classList.toggle("fa-sun");
+  button.classList.toggle("fa-moon");
 }
