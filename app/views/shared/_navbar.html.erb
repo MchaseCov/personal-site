@@ -12,14 +12,10 @@
     </div>
   </div>
   <div class="navbar-end  hidden lg:flex">
-    <% if cookies[:dark_mode] %>
-      <%= button_to light_mode_path, method: :get, class:"btn btn-square btn-ghost", :data => {turbo: "false"}, 'aria-label': "Toggle light mode." do %>
-        <i class="fas fa-sun" style='font-size:1.5em'></i>
-      <% end %>
+    <% if cookies[:darkmode] %>
+      <i class="fas fa-sun toggle-theme" style='font-size:1.5em'></i>
     <% else %>
-      <%= button_to dark_mode_path, method: :get, class:"btn btn-square btn-ghost", :data => {turbo: "false"}, 'aria-label': "Toggle dark mode." do %>
-        <i class="fas fa-moon" style='font-size:1.5em'></i>
-      <% end %>
+      <i class="fas fa-moon toggle-theme" style='font-size:1.5em'></i>
     <% end %>
     <div data-tip="My LinkedIn" class="tooltip tooltip-left tooltip-neutral">
       <button class="btn btn-square btn-ghost">
