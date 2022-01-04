@@ -1,3 +1,5 @@
+<% title @blog.title %>
+<% meta_tag :description, "A blog page" %>
 <%= turbo_frame_tag id="content-slider", target: '_top', class:"w-full", data: {turbo_action: "advance"} do%>
   <article id="animation-region" class="flex flex-col w-full animate__animated animate__fadeInRight">
     <%= turbo_frame_tag id="project-information", class:"w-full completed" do%>
