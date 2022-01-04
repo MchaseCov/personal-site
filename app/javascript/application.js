@@ -40,13 +40,18 @@ document.addEventListener("turbo:before-fetch-request", async (event) => {
 // Dark Mode Toggle
 
 const html = document.querySelector("html"),
-  button = document.querySelector(".toggle-theme");
+  mainButton = document.querySelector(".toggle-theme"),
+  footerButton = document.querySelector(".toggle-theme-footer");
 
-button.addEventListener("click", () => {
-  darkMode();
+mainButton.addEventListener("click", () => {
+  darkMode(mainButton);
 });
 
-function darkMode() {
+footerButton.addEventListener("click", () => {
+  darkMode(footerButton);
+});
+
+function darkMode(button) {
   if (html.dataset.theme == "personaldark") {
     html.dataset.theme = "personaltheme";
     document.cookie =

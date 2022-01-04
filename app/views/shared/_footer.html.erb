@@ -6,10 +6,10 @@
     <%= link_to  "Portfolio", projects_path, class:"link link-hover" %>
     <%= link_to  "Blogs", blogs_path, class:"link link-hover" %>
     <%= link_to 'Resume (.pdf in new tab)', root_url+'Chase_Covington.pdf', target: '_blank', class:"link link-hover" %>
-    <% if cookies[:dark_mode] %>
-      <%= link_to "Disable Dark Mode", light_mode_path, class:"link link-hover", :data => {turbo: "false"} %>
+    <% if cookies[:darkmode] %>
+      <i class="fas fa-sun toggle-theme-footer" style='font-size:1.5em'></i>
     <% else %>
-      <%= link_to "Enable Dark Mode", dark_mode_path, class:"link link-hover", :data => {turbo: "false"} %>
+      <i class="fas fa-moon toggle-theme-footer" style='font-size:1.5em'></i>
     <% end %>
   </div>
   <div>
