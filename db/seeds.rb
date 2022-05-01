@@ -197,6 +197,19 @@ Project.create(
       live_url: 'https://rubygems.org/gems/hotwire_scaffold_generator',
       feature_list: ['A functional Ruby gem for Rails', 'Custom scaffolding to create a SPA app in moments',
                      'Published on rubygems.org']
+    },
+    {
+      title: 'Collectable Card Game',
+      screenshot_url: 'https://i.imgur.com/AMoteI2.png',
+      thumb_icon: 'fas fa-layer-group',
+      full_desc: 'This project seeks to create a fun and strategic game in your web browser. Players can create decks from a variety of cards and engage in battle against other players using their decks. The game takes heavily inspiration from other games in this genre, such as Magic: The Gathering, Hearthstone, Yu-Gi-Oh, and more.
+
+      Players queue their personalized decks of 30 cards to battle it out. Every turn, players can spend their resources on hiring party members to fight for them or cast powerful spells to gain an advantage. The complete tabletop feeling is created through use of React, Stimulus, and Tailwind.',
+      small_desc: 'A game about creating decks and battling other players!',
+      repo_url: 'https://github.com/MchaseCov/collect-card-game',
+      live_url: 'https://collect-card-game.herokuapp.com/',
+      feature_list: ['Create custom decks with powerful cards', '3D GUI to simulate the tabletop feeling',
+                     'Battle with your opponent in real time']
     }
   ]
 )
