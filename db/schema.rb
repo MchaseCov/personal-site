@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_02_174946) do
+ActiveRecord::Schema.define(version: 2023_11_01_195513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,13 +49,4 @@ ActiveRecord::Schema.define(version: 2022_01_02_174946) do
     t.boolean "hidden", default: false
   end
 
-  create_table "scrollers", force: :cascade do |t|
-    t.text "body"
-    t.bigint "card_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["card_id"], name: "index_scrollers_on_card_id"
-  end
-
-  add_foreign_key "scrollers", "cards"
 end

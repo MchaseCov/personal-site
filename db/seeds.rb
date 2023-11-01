@@ -22,86 +22,12 @@ Card.create(
     { title: 'Get to know me!',
       body: 'I enjoy sharing what I know, and talking about my experiences!',
       call_to_action: 'Check my blog out?',
-      cta_path: 'projects',
+      cta_path: 'blogs',
       icon_class: 'far fa-handshake',
       page_name: 'main' }
   ]
 )
 
-Card.first.scrollers.create(
-  [
-    { body: 'Passionate' },
-    { body: 'Architecture' },
-    { body: 'Love the beach' },
-    { body: 'Ambition' },
-    { body: 'Cat lover' },
-    { body: 'Art and Design' },
-    { body: 'Curiosity Driven' },
-    { body: 'Experimentation' },
-    { body: 'Love for learning' },
-    { body: 'Innovative' },
-    { body: 'Determination' },
-    { body: 'Cooking' },
-    { body: 'South Carolina' },
-    { body: 'PC Hardware' },
-    { body: 'Momentum Workflow' },
-    { body: 'Nature' },
-    { body: 'Animal Crossing' },
-    { body: 'Figuring out "Why?"' },
-    { body: 'Photography' },
-    { body: 'Excited' }
-  ]
-)
-
-Card.second.scrollers.create(
-  [
-    { body: 'HTML' },
-    { body: 'Turbo Links' },
-    { body: 'Responsive Design' },
-    { body: 'Postgres' },
-    { body: 'MVC Frameworks' },
-    { body: 'Javascript' },
-    { body: 'RSpec' },
-    { body: 'Rails' },
-    { body: 'SQL' },
-    { body: 'Test-Driven-Design' },
-    { body: 'CSS' },
-    { body: 'Turbo Frames' },
-    { body: 'Tailwind' },
-    { body: 'Bash' },
-    { body: 'Git Push --Force' },
-    { body: 'Devise' },
-    { body: 'Stimulus' },
-    { body: 'Ruby' },
-    { body: 'Data Validation' },
-    { body: 'Omniauth' }
-  ]
-)
-
-Card.third.scrollers.create(
-  [
-    { body: 'Self-Teaching' },
-    { body: 'Partnership' },
-    { body: 'Documentation' },
-    { body: 'Shared Experience' },
-    { body: 'Reflection' },
-    { body: 'Open-Source' },
-    { body: 'Collaberation' },
-    { body: 'Participation' },
-    { body: 'Self-Expression' },
-    { body: 'Community' },
-    { body: 'Expertise' },
-    { body: 'Learning from Feedback' },
-    { body: 'Audience' },
-    { body: 'Learning From Mistakes' },
-    { body: 'Creative Outlet' },
-    { body: 'Journey' },
-    { body: 'Knowledge' },
-    { body: 'Technical Content' },
-    { body: 'Sharing Passions' },
-    { body: 'Guiding Others' }
-  ]
-)
 Project.create(
   [
     {
