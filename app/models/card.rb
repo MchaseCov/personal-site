@@ -13,6 +13,7 @@
 # updated_at      :datetime     null: false
 #
 class Card < ApplicationRecord
+  include CardScrollers
   # Callbacks
 
   # Scopes
@@ -24,8 +25,7 @@ class Card < ApplicationRecord
   validates_format_of :icon_class, with: /(fas |fab |far )/
   validates :page_name, inclusion: { in: %w[main about portfolio], message: '%<value>s is not a valid page!' }
 
-  # Associations
-  has_many :scrollers
-
-  # Methods
+  def scrollers
+    SCROLLER_ASSIGNMENTS[title]
+  end
 end
