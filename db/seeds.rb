@@ -8,7 +8,7 @@
 Card.create(
   [
     { title: 'Hello & Welcome!',
-      body: "My name is Chase Covington. I'm a web developer from SC.",
+      body: "My name is Chase Covington. I'm a web developer located in Chicago, IL.",
       call_to_action: 'Learn More About Me?',
       cta_path: 'about',
       icon_class: 'far fa-address-card',
